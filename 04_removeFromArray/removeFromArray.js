@@ -14,19 +14,12 @@ const removeFromArray = function (inputArray) {
   */
 
   let outputArray = [];
-  const startingLength = inputArray.length;
-  console.log(`startingLength = ${startingLength}`);
-  const argumentsLength = arguments.length;
-  console.log(`argumentsLength = ${argumentsLength}`);
   let counter = 0;
 
-  for (let i = 0; i < startingLength; i++) {
-    console.log(`array element = ${inputArray[i]}\nat index i = ${i}`);
+  for (let i = 0; i < inputArray.length; i++) {
     counter = 0;
 
-    for (let j = 1; j < argumentsLength; j++) {
-      console.log(`argument = ${arguments[j]}\nat index j = ${j}`);
-
+    for (let j = 1; j < arguments.length; j++) {
       if (inputArray[i] === arguments[j]) {
         // match found: don't keep item i
         break;
@@ -38,9 +31,8 @@ const removeFromArray = function (inputArray) {
 
     //if no match is found against all the arguments (items to be removed)
     //then we want to keep the i element
-    if (counter == argumentsLength - 1) {
+    if (counter == arguments.length - 1) {
       outputArray.push(inputArray[i]);
-      console.log(`Item pushed. outputArray = ${outputArray}`);
     }
   }
 
