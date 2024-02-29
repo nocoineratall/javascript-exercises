@@ -1,6 +1,5 @@
 const sumAll = function (start, end) {
-  let arrayOfAll = [];
-  let sum = 0;
+  //let arrayOfAll = [];
 
   if (start < 0 || end < 0) {
     return "ERROR";
@@ -14,13 +13,9 @@ const sumAll = function (start, end) {
       start = hold;
     }
 
-    //builds an array made of integers from start to end
+    let sum = 0;
     for (let i = start; i <= end; i++) {
-      arrayOfAll.push(i);
-    }
-
-    for (let j = 0; j < arrayOfAll.length; j++) {
-      sum += arrayOfAll[j];
+      sum += i;
     }
     return sum;
   }
